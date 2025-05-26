@@ -1,0 +1,15 @@
+@use "./reset.scss" as *;
+@use "./fonts.scss" as *;
+@use "./antd.scss" as *;
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}

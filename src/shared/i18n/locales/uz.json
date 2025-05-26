@@ -1,0 +1,55 @@
+{
+  "navigation": {
+    "home": "Bosh sahifa",
+    "examples": "Ish namunalari",
+    "myVideos": "Mening videolarim",
+    "faq": "FAQ"
+  },
+  "home": {
+    "title": "Xat asosida video yarating",
+    "desc": "Video yaratish uchun xat matni yoki PDF-faylni yuklab oling"
+  },
+  "text": "Matn",
+  "pdf": "PDF",
+  "uploadLetter": "Xatni yuklash",
+  "textLetter": "Xat matnini kiriting",
+  "upload": {
+    "clickOrDrag": "Yuklash uchun faylni shu sohaga bosing yoki olib kelib tashlang",
+    "hint": "Kompaniya ma'lumotlarini yoki boshqa taqiqlangan fayllarni yuklash qat'iy taqiqlanadi."
+  },
+  "examples": "Ish namunalari",
+  "video": {
+    "tabs": {
+      "video": "Video",
+      "script": "Ssenariy",
+      "original": "Asl matn",
+      "images": "Kadr"
+    }
+  },
+  "faq": {
+    "title": "Tez-tez beriladigan savollar",
+    "subtitle": "Bizning xizmatimiz haqida eng keng tarqalgan savollarga javoblarni toping",
+    "items": {
+      "what": {
+        "question": "Win Code nima?",
+        "answer": "Win Code — bu innovatsion platforma hisobotlarni avtomatlashtirish orqali video yaratishga yordam beradi. Biz foydalanuvchilarga sun'iy intellekt yordamida professionallik bilan video hisobotlar yaratishda yordam beramiz."
+      },
+      "how": {
+        "question": "Win Codeni ishlatish qanday boshlanadi?",
+        "answer": "Win Code bilan ishlash uchun siz saytga ro'yxatdan o'tishingiz, mos tarif rejasini tanlash va birinchi hisobotingizni yuklash kerak. Bizning tizimimiz berilgan ma'lumotlarga asoslanib avtomatik ravishda video hisobot yaratadi."
+      },
+      "features": {
+        "question": "Qanday funksiyalar mavjud?",
+        "answer": "Win Code keng doiradagi funksiyalarni taklif qiladi: video hisobotlarni avtomatik yaratish, turli hujjat formatlarini qo'llab-quvvatlash, uslublar va shablonlarni sozlash hamda turli formatlarda eksport qilish imkoniyati."
+      },
+      "pricing": {
+        "question": "Tariflar qanday ishlaydi?",
+        "answer": "Biz foydalanuvchilarning turli ehtiyojlari uchun bir nechta tarif rejalari taklif qilamiz. Oddiy rejada asosiy funktsiyalar mavjud bo'lib, premium rejalar esa kengaytirilgan imkoniyatlarga va ustuvorlik bilan qo'llab-quvvatlashga ruxsat beradi."
+      },
+      "support": {
+        "question": "Qanday qilib yordam olish mumkin?",
+        "answer": "Bizning yordam xizmatimiz chat, elektron pochta va telefon orqali 24/7 ishlaydi. Shuningdek, platformani o'rganish uchun batafsil hujjatlar hamda video darsliklar ham berilgan."
+      }
+    }
+  }
+}

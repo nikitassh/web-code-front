@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__image {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "navigation": {
+    "home": "Ana səhifə",
+    "examples": "İş nümunələri",
+    "myVideos": "Mənim videolarım",
+    "faq": "FAQ"
+  },
+  "home": {
+    "title": "Məktuba əsasən video yaradın",
+    "desc": "Video yaratmaq üçün məktubun mətnini və ya PDF faylı yükləyin"
+  },
+  "text": "Mətn",
+  "pdf": "PDF",
+  "uploadLetter": "Məktub yüklə",
+  "textLetter": "Məktubun mətnini yazın",
+  "upload": {
+    "clickOrDrag": "Yükləmək üçün faylı bu sahəyə klik edin və ya sürükləyin",
+    "hint": "Şirkət məlumatlarını və ya digər qadağan edilmiş faylları yükləmək ciddi qadağandır."
+  },
+  "examples": "İş nümunəlі",
+  "video": {
+    "tabs": {
+      "video": "Video",
+      "script": "Ssenari",
+      "original": "Orijinal mətn",
+      "images": "Kadr"
+    }
+  },
+  "faq": {
+    "title": "Tez-tez verilən suallar",
+    "subtitle": "Xidmətimizlə bağlı ən yayılmış suallara cavablar tapın",
+    "items": {
+      "what": {
+        "question": "Win Code nədir?",
+        "answer": "Win Code – video hesabatların avtomatlaşdırılması üzrə innovasiya platformasıdır. Biz istifadəçilərə süni intellekt köməyi ilə peşəkar video hesabatlar hazırlamaqda kömək edirik."
+      },
+      "how": {
+        "question": "Win Code-dan necə istifadə etməyə başlamaq olar?",
+        "answer": "Win Code ilə işə başlamaq üçün platformaya qeydiyyatdan keçməlisiniz, uyğun tarif planını seçmək və ilk hesabatınızı yükləmək lazımdır. Bizim sistemimiz təqdim edilən məlumata əsasən avtomatik video hesabat yaradacaq."
+      },
+      "features": {
+        "question": "Əsas funksiyalar hansılardır?",
+        "answer": "Win Code geniş imkanlar təklif edir: video hesabatların avtomatik yaradılması, müxtəlif formatların dəstəklənməsi, stil və şablonların tənzimlənməsi, həmçinin müxtəlif formatlara ixrac imkanı."
+      },
+      "pricing": {
+        "question": "Tariflər necə işləyir?",
+        "answer": "Biz istifadəçilərin müxtəlif ehtiyaclarına uyğun bir neçə tarif planı təklif edirik. Əsas plan əsas funksiyaları əhatə edir, premium planlar isə genişləndirilmiş imkanlara və üstünlükli dəstəyə giriş verir."
+      },
+      "support": {
+        "question": "Dəstəyi necə almaq olar?",
+        "answer": "Dəstək xidmətimiz onlayn çat, e-poçt və telefon vasitəsilə 24/7 mövcuddur. Platformanın öyrənilməsi üçün ətraflı sənədlər və video dərslər də təqdim edirik."
+      }
+    }
+  }
+}
