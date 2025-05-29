@@ -1,0 +1,35 @@
+{
+  "form": {
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "required": "This field is required",
+    "imagePrompts": {
+      "first": "First image scenario",
+      "second": "Second image scenario",
+      "third": "Third image scenario"
+    },
+    "videoPrompts": {
+      "first": "First video scenario",
+      "second": "Second video scenario",
+      "third": "Third video scenario"
+    },
+    "audioText": "Audio text"
+  },
+  "modal": {
+    "edit": "Edit",
+    "upload": "Upload",
+    "cancel": "Cancel",
+    "generatingScript": "Generating script...",
+    "generateError": "Generation error",
+    "generateErrorDescription": "Failed to generate script. Please try again."
+  },
+  "loader": {
+    "steps": {
+      "analyzing": "Analyzing your request...",
+      "generatingImages": "Generating images...",
+      "creatingVideo": "Creating video...",
+      "finalizing": "Finalizing..."
+    }
+  }
+}

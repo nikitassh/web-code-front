@@ -4,8 +4,7 @@ import { LetterUpload } from "@/components/molecules/LetterUpload";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 
-import { useVideoGenerate } from "@/shared/api/hooks/video/useVideoGenerate";
-import { generateUUID } from "@/shared/utils/uuid";
+import { ModalAI } from "@/components/modals";
 import s from "./LetterForm.module.scss";
 
 export const LetterForm: React.FC = () => {
@@ -15,14 +14,7 @@ export const LetterForm: React.FC = () => {
 
   const [isText, setIsText] = React.useState<boolean>(true);
 
-  const generateVideoMutation = useVideoGenerate();
-
-  const onSubmit = React.useCallback(() => {
-    generateVideoMutation.mutate({
-      text,
-      uuid: generateUUID(),
-    });
-  }, [generateVideoMutation, text]);
+  const [modalOpened, setModalOpened] = React.useState<boolean>(false);
 
   return (
     <div>
@@ -44,14 +36,19 @@ export const LetterForm: React.FC = () => {
           <Button
             variant="solid"
             color="orange"
-            onClick={onSubmit}
-            loading={generateVideoMutation.isLoading}
-            disabled={generateVideoMutation.isLoading}
+            onClick={() => setModalOpened(true)}
           >
             {t("uploadLetter")}
           </Button>
         </div>
       </div>
+
+      <ModalAI
+        letterText={text}
+        open={modalOpened}
+        closeModal={() => setModalOpened(false)}
+        centered
+      />
     </div>
   );
 };

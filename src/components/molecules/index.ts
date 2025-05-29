@@ -5,3 +5,5 @@ export * from "./LetterUpload";
 export * from "./Logo";
 
 export * from "./Video";
+
+export * from "./VideoGenerationLoader";
