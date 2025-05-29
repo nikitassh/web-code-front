@@ -1,5 +1,24 @@
 .layout {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background-image: url("@shared/assets/images/main-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+    z-index: -1;
+  }
+
   &__outlet {
-    margin-top: 36px;
+    padding-top: 36px;
+    height: calc(100vh - $HEADER_HEIGHT);
   }
 }

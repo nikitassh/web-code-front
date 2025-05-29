@@ -5,7 +5,7 @@ import s from "./BaseLayout.module.scss";
 
 export const BaseLayout = () => {
   return (
-    <div>
+    <div className={s.layout}>
       <Header />
       <div className={s.layout__outlet}>
         <Outlet />

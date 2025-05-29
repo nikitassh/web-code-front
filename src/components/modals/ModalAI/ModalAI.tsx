@@ -18,6 +18,7 @@ import { useModalAI } from "./useModalAI";
 import { useVideoGenerate } from "@/shared/api/hooks/video/useVideoGenerate";
 import { generateUUID } from "@/shared/utils/uuid";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import s from "./ModalAI.module.scss";
 
 type ModalAIProps = ModalProps & {
@@ -39,6 +40,8 @@ export const ModalAI: React.FC<ModalAIProps> = ({
     setText,
     parseJson,
   } = useModalAI(letterText);
+
+  const navigate = useNavigate();
 
   const [api, contextHolder] = notification.useNotification();
   const [isEditing, setIsEditing] = React.useState(false);
@@ -66,17 +69,51 @@ export const ModalAI: React.FC<ModalAIProps> = ({
         });
       }
     }
-  }, [text, isFinished, form, parseJson, t, api]);
+  }, [text, isFinished, form, parseJson, t, api, isEditing]);
 
   const generateVideoMutation = useVideoGenerate();
 
   const onSubmit = React.useCallback(() => {
-    const values = form.getFieldsValue();
-    generateVideoMutation.mutate({
-      uuid: generateUUID(),
-      ...values,
-    });
-  }, [form, generateVideoMutation]);
+    let json;
+
+    try {
+      json = parseJson(text);
+    } catch {
+      api.error({
+        message: t("modal.generateError"),
+        description: t("modal.generateErrorDescription"),
+      });
+
+      return;
+    }
+
+    const values = isEditing ? form.getFieldsValue() : json;
+
+    const uuid = generateUUID();
+
+    generateVideoMutation.mutate(
+      {
+        uuid,
+        ...values,
+      },
+      {
+        onSuccess: () => {
+          closeModal();
+          navigate(`/video/${uuid}`);
+        },
+      }
+    );
+  }, [
+    isEditing,
+    form,
+    generateVideoMutation,
+    parseJson,
+    text,
+    api,
+    t,
+    closeModal,
+    navigate,
+  ]);
 
   const handleEdit = React.useCallback(() => {
     setIsEditing(true);
@@ -129,8 +166,7 @@ export const ModalAI: React.FC<ModalAIProps> = ({
             <Button onClick={handleCancel}>{t("modal.cancel")}</Button>
           )}
           <Button
-            variant="solid"
-            color="orange"
+            type="primary"
             disabled={isLoading || !isFinished}
             onClick={onSubmit}
           >

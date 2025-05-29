@@ -1,0 +1,26 @@
+import type { ThemeConfig } from "antd";
+
+export const CoreColors: ThemeConfig["token"] = {
+  colorPrimary: "#CF001C",
+  //   colorInfo: "#5FAF2D",
+  //   colorPrimaryBg: "#F3F5F2",
+  //   colorPrimaryBgHover: "#E8F3E0",
+  //   colorPrimaryBorder: "#71AE3C",
+  //   colorPrimaryBorderHover: "#5D9930",
+  //   colorPrimaryHover: "#85C061",
+  //   colorPrimaryActive: "#49911D",
+  //   colorPrimaryTextHover: "#438A1C",
+  //   colorPrimaryText: "#3A7919",
+  //   colorPrimaryTextActive: "#2F6415",
+  //   colorInfoBg: "#F3F5F2",
+  //   colorInfoBgHover: "#E8F3E0",
+  //   colorInfoBorder: "#71AE3C",
+  //   colorInfoBorderHover: "#5D9930",
+  //   colorInfoHover: "#85C061",
+  //   colorInfoActive: "#49911D",
+  //   colorInfoTextHover: "#438A1C",
+  //   colorInfoText: "#3A7919",
+  //   colorInfoTextActive: "#2F6415",
+  //   controlItemBgActive: "#F0F8EC",
+  //   controlItemBgActiveHover: "#D8EFD8",
+};

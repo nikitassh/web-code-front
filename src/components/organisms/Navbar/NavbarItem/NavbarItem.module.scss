@@ -1,0 +1,16 @@
+.navlink {
+  position: relative;
+
+  &:hover {
+    color: $COLOR_PRIMARY;
+  }
+
+  &__underline {
+    position: absolute;
+    bottom: -6px;
+    left: 7%;
+    width: 86%;
+    height: 1.5px;
+    background-color: $COLOR_PRIMARY;
+  }
+}

@@ -15,6 +15,16 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
       "@app": resolve(__dirname, "./src/app"),
       "@components": resolve(__dirname, "./src/components"),
+      "@shared": resolve(__dirname, "./src/shared"),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "@/shared/styles/tokens.scss" as *;
+        `,
+      },
     },
   },
 });

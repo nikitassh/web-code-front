@@ -4,6 +4,7 @@ import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { useLetterUpload } from "./useLetterUpload";
 
+import { InboxOutlined } from "@ant-design/icons";
 import s from "./LetterUpload.module.scss";
 
 if (typeof window !== "undefined" && "Worker" in window) {
@@ -21,9 +22,9 @@ export const LetterUpload: React.FC<LetterUploadProps> = ({ setText }) => {
 
   return (
     <Upload.Dragger {...props} className={s.upload}>
-      <p>{/* <InboxOutlined /> */}</p>
-      <p>{t("upload.clickOrDrag")}</p>
-      <p>{t("upload.hint")}</p>
+      <InboxOutlined className={s.upload__icon} />
+      <p className={s.upload__title}>{t("upload.clickOrDrag")}</p>
+      <p className={s.upload__hint}>{t("upload.hint")}</p>
     </Upload.Dragger>
   );
 };

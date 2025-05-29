@@ -6,4 +6,4 @@ export const API_URLS = {
   },
 };
 
-export const API_URL = "https://full-crews-retire.loca.lt";
+export const API_URL = "https://tidy-bars-spend.loca.lt";

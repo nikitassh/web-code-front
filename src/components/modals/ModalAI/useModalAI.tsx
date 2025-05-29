@@ -17,6 +17,8 @@ export const useModalAI = (letterText: string) => {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isFinished, setIsFinished] = React.useState<boolean>(false);
 
+  console.log(text);
+
   const fetchAIPrompt = React.useCallback(async () => {
     if (!letterText) {
       return;
@@ -32,11 +34,11 @@ export const useModalAI = (letterText: string) => {
         method: "POST",
         headers: {
           Authorization:
-            "Bearer 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",
+            "Bearer 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",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "mistralai/mistral-7b-instruct",
+          model: "qwen/qwen3-235b-a22b",
           stream: true,
           messages: [{ role: "user", content: PROMPT + letterText }],
         }),
@@ -73,7 +75,7 @@ export const useModalAI = (letterText: string) => {
 
     setIsFinished(true);
     setIsLoading(false);
-  }, [letterText]);
+  }, [letterText, setText]);
 
   const parseJson = React.useCallback((text: string): JSONResponse | null => {
     try {

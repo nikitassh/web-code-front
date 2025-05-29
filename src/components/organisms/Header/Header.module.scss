@@ -1,6 +1,7 @@
 .header {
-  padding: 20px 0;
-  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  height: $HEADER_HEIGHT;
 
   &__container {
     display: flex;

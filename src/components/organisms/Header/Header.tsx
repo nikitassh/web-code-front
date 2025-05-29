@@ -1,6 +1,6 @@
 import { Container } from "@/components/atoms";
 import { Logo } from "@/components/molecules";
-import { Navbar } from "@/components/organisms";
+import { Navbar, SelectLanguage } from "@/components/organisms";
 import s from "./Header.module.scss";
 
 export const Header = () => {
@@ -10,6 +10,8 @@ export const Header = () => {
         <Logo />
 
         <Navbar />
+
+        <SelectLanguage />
       </Container>
     </header>
   );

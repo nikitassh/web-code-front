@@ -1,7 +1,62 @@
 .page {
-  &__orange {
-    margin-top: 4px;
-    margin-bottom: 96px;
-    color: orange;
+  position: relative;
+  height: 100%;
+  perspective: 1000px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 72px;
+
+    &__title {
+      text-align: center;
+      color: $COLOR_PRIMARY;
+    }
+
+    &__description {
+      text-align: center;
+    }
+  }
+
+  &__ribbon_1 {
+    width: 800px;
+    height: 320px;
+    object-fit: cover;
+    position: absolute;
+    left: -13%;
+    bottom: 4%;
+    transform: rotate(60deg);
+  }
+
+  &__ribbon_2 {
+    width: 400px;
+    height: 165px;
+    object-fit: cover;
+    position: absolute;
+    right: -8%;
+    bottom: 5%;
+    transform: rotate(290deg) rotateY(180deg);
+  }
+
+  &__star_1 {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    transform: rotate(30deg);
+  }
+
+  &__star_2 {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    position: absolute;
+    right: 9%;
+    bottom: -2%;
+    transform: rotate(-30deg);
   }
 }

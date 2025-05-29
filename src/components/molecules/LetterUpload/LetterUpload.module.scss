@@ -1,4 +1,17 @@
 .upload {
   width: 100%;
   height: 200px;
+
+  &__icon {
+    font-size: 36px;
+    color: $COLOR_PRIMARY;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__hint {
+    font-size: 14px;
+  }
 }

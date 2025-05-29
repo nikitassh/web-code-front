@@ -7,7 +7,7 @@
 .segmentedControl {
   position: relative;
   display: flex;
-  background: #f5f5f5;
+  background: #ededed;
   padding: 4px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -21,7 +21,7 @@
   background: transparent;
   font-size: 16px;
   font-weight: 500;
-  color: #666;
+  color: color;
   cursor: pointer;
   transition: color 0.3s ease;
   border-radius: 8px;
@@ -29,12 +29,8 @@
   text-align: center;
   flex-shrink: 0;
 
-  &:hover {
-    color: #333;
-  }
-
   &.selected {
-    color: #fff;
+    color: white;
   }
 }
 
@@ -42,7 +38,7 @@
   position: absolute;
   top: 4px;
   height: calc(100% - 8px);
-  background: linear-gradient(45deg, #ff7a45, #ff4d4f);
+  background: $COLOR_PRIMARY;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   left: 0px;
