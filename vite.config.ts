@@ -10,6 +10,9 @@ const __dirname = dirname(__filename);
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
+  server: {
+    allowedHosts: [".ngrok-free.app"],
+  },
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),

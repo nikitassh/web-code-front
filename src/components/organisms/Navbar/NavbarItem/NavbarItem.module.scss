@@ -13,4 +13,8 @@
     height: 1.5px;
     background-color: $COLOR_PRIMARY;
   }
+
+  @include mobile {
+    font-size: 14px;
+  }
 }

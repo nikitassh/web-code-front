@@ -2,3 +2,11 @@ $HEADER_HEIGHT: 74px;
 
 $COLOR_PRIMARY: rgb(207, 0, 28);
 $COLOR_PRIMARY_LIGHT: rgba(207, 0, 28, 0.1);
+
+$BREAKPOINT_MOBILE: 768px;
+
+@mixin mobile {
+  @media screen and (max-width: $BREAKPOINT_MOBILE) {
+    @content;
+  }
+}

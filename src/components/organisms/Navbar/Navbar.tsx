@@ -1,13 +1,13 @@
-import { Flex } from "antd";
-import { NavbarItem } from "./NavbarItem";
 import { NAVBAR_ITEMS } from "./config";
+import s from "./Navbar.module.scss";
+import { NavbarItem } from "./NavbarItem";
 
 export const Navbar = () => {
   return (
-    <Flex gap={40} align="center">
+    <div className={s.navbar}>
       {NAVBAR_ITEMS.map((item) => (
         <NavbarItem item={item} />
       ))}
-    </Flex>
+    </div>
   );
 };

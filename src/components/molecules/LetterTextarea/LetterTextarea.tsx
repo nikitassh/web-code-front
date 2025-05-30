@@ -2,6 +2,7 @@ import { Input } from "antd";
 import * as React from "react";
 
 import { useTranslation } from "react-i18next";
+
 import s from "./LetterTextarea.module.scss";
 
 type LetterTextareaProps = {
@@ -27,7 +28,6 @@ export const LetterTextarea: React.FC<LetterTextareaProps> = ({ setText }) => {
       maxLength={1000}
       onChange={onChange}
       placeholder={t("textLetter")}
-      style={{ height: 200, resize: "none" }}
     />
   );
 };
