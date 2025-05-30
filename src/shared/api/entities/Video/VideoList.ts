@@ -26,6 +26,7 @@ export const videoListSchema = videoListObject.transform((raw) =>
     videoUrl3: video.video_url_3,
     finalVideo: video.final_video || null,
     createdAt: new Date(video.created_at),
+    status: video.status,
   }))
 );
 

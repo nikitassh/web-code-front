@@ -5,7 +5,7 @@ export const videoObject = z.object({
   uuid: z.string(),
   original_text: z.string(),
   processed_text: z.string(),
-  author_gender: z.enum(["male", "female"]),
+  author_gender: z.enum(["male", "female", "М", "Ж"]).optional(),
   image_prompt_1: z.string(),
   image_prompt_2: z.string(),
   image_prompt_3: z.string(),
@@ -22,6 +22,7 @@ export const videoObject = z.object({
   video_url_3: z.string(),
   final_video: z.string().nullable(),
   created_at: z.string().datetime(),
+  status: z.enum(["pending", "in_progress", "completed", "failed"]).optional(),
 });
 
 export const videoSchema = videoObject.transform((raw) => ({
@@ -46,6 +47,7 @@ export const videoSchema = videoObject.transform((raw) => ({
   videoUrl3: raw.video_url_3,
   finalVideo: raw.final_video || null,
   createdAt: new Date(raw.created_at),
+  status: raw.status,
 }));
 
 export type VideoEntityApi = z.input<typeof videoSchema>;

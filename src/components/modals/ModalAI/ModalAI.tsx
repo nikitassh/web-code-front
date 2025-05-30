@@ -94,6 +94,7 @@ export const ModalAI: React.FC<ModalAIProps> = ({
     generateVideoMutation.mutate(
       {
         uuid,
+        original_text: letterText,
         ...values,
       },
       {
@@ -113,6 +114,7 @@ export const ModalAI: React.FC<ModalAIProps> = ({
     t,
     closeModal,
     navigate,
+    letterText,
   ]);
 
   const handleEdit = React.useCallback(() => {

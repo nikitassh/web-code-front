@@ -22,8 +22,9 @@
     "tabs": {
       "video": "Видео",
       "script": "Сценарий",
-      "original": "Исходный текст",
-      "images": "Кадры"
+      "original": "Письмо",
+      "images": "Кадры",
+      "audio": "Аудио"
     }
   },
   "form": {

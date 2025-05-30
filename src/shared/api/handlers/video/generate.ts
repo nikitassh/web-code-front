@@ -10,6 +10,7 @@ type PostVideoGeneratePayload = {
   video_prompt_2: string;
   video_prompt_3: string;
   audio_text: string;
+  original_text: string;
 };
 
 export const postVideoGenerate = async (payload: PostVideoGeneratePayload) => {

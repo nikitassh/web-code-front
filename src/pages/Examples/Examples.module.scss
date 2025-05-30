@@ -1,9 +1,35 @@
 .page {
-  &__image {
-    width: 380px;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin: 8px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $COLOR-PRIMARY;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 24px;
+    height: calc(100vh - $HEADER_HEIGHT - 120px);
+    overflow-y: auto;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $COLOR_PRIMARY_LIGHT;
+      border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $COLOR-PRIMARY;
+      border-radius: 20px;
+    }
   }
 }

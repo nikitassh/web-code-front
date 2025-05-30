@@ -29,7 +29,7 @@ export const Loader: React.FC = () => {
         }
         return prev + 1;
       });
-    }, 1200); // Примерно 2 минуты на полную загрузку
+    }, 1200);
 
     return () => clearInterval(interval);
   }, []);
@@ -43,7 +43,7 @@ export const Loader: React.FC = () => {
         }
         return prev + 1;
       });
-    }, 30000); // Смена этапа каждые 30 секунд
+    }, 30000);
 
     return () => clearInterval(stepInterval);
   }, []);
@@ -67,34 +67,29 @@ export const Loader: React.FC = () => {
         percent={progress}
         showInfo={false}
         strokeColor={{
-          "0%": "#108ee9",
-          "100%": "#87d068",
+          "0%": "#ffa39e",
+          "100%": "#ff4d4f",
         }}
         className={s.loader__progress}
       />
 
       <Flex vertical align="center" gap={8}>
-        {steps.map((step, index) => (
-          <motion.div
-            key={step}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{
-              opacity: currentStep === index ? 1 : 0.5,
-              y: currentStep === index ? 0 : 20,
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <Text
-              className={s.loader__step}
-              style={{
-                color: currentStep === index ? "#1890ff" : "inherit",
-                fontWeight: currentStep === index ? "bold" : "normal",
-              }}
-            >
-              {t(step)}
-            </Text>
-          </motion.div>
-        ))}
+        {steps.map(
+          (step, index) =>
+            index >= currentStep && (
+              <div key={step}>
+                <Text
+                  className={s.loader__step}
+                  style={{
+                    color: currentStep === index ? "#cf001c" : "inherit",
+                    fontWeight: currentStep === index ? "bold" : "normal",
+                  }}
+                >
+                  {t(step)}
+                </Text>
+              </div>
+            )
+        )}
       </Flex>
     </Flex>
   );

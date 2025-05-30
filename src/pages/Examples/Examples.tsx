@@ -1,8 +1,8 @@
 import { Container } from "@/components/atoms";
 import { useVideoList } from "@/shared/api/hooks";
-import { Flex, Spin } from "antd";
-import { Link } from "react-router-dom";
 
+import { ExampleItem } from "@/components/molecules";
+import { Spin } from "antd";
 import { useTranslation } from "react-i18next";
 import s from "./Examples.module.scss";
 
@@ -11,22 +11,18 @@ export const Examples = () => {
   const videoListQuery = useVideoList();
 
   return (
-    <Container>
-      <h1>{t("examples")}</h1>
+    <Container className={s.page}>
+      <h1 className={s.page__title}>{t("examples")}</h1>
 
-      <div>
-        {videoListQuery.isLoading && <Spin size="large" />}
+      {videoListQuery.isLoading && <Spin size="large" />}
 
-        {videoListQuery.isSuccess && videoListQuery.data && (
-          <Flex wrap justify="space-between" align="center">
-            {videoListQuery.data.map((i) => (
-              <Link key={i.id} to={`/video/${i.uuid}`}>
-                <img src={i.imageUrl1} alt="" className={s.page__image} />
-              </Link>
-            ))}
-          </Flex>
-        )}
-      </div>
+      {videoListQuery.isSuccess && videoListQuery.data && (
+        <div className={s.page__list}>
+          {videoListQuery.data.map((item) => (
+            <ExampleItem key={item.id} item={item} />
+          ))}
+        </div>
+      )}
     </Container>
   );
 };

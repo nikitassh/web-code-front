@@ -13,7 +13,6 @@ import {
 import { BaseLayout } from "./components/layouts/BaseLayout/BaseLayout";
 import { Examples } from "./pages/Examples";
 import { FAQ } from "./pages/FAQ";
-import { Test } from "./pages/Test";
 import { VideoPage } from "./pages/VideoPage";
 
 createRoot(document.getElementById("root")!).render(
@@ -27,7 +26,6 @@ createRoot(document.getElementById("root")!).render(
               <Route path="/examples" element={<Examples />} />
               <Route path="/video/:uuid" element={<VideoPage />} />
               <Route path="/faq" element={<FAQ />} />
-              <Route path="/test" element={<Test />} />
             </Route>
           </Routes>
         </BrowserRouter>

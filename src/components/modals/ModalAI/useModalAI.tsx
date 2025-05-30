@@ -34,7 +34,7 @@ export const useModalAI = (letterText: string) => {
         method: "POST",
         headers: {
           Authorization:
-            "Bearer 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",
+            "Bearer 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",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
